@@ -1,0 +1,24 @@
+test_has_error_and_bucket (test_acc03.TestRows.test_has_error_and_bucket) ... ok
+test_parse_short (test_acc03.TestRows.test_parse_short) ... ok
+test_shorten_rows_keeps_the_shorter (test_acc03.TestRows.test_shorten_rows_keeps_the_shorter) ... /work/acc03.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpin83dy14/in0.txt' mode='r' encoding='UTF-8'>
+  procs.append(subprocess.Popen([SHORT] + opts, stdin=open(src), stdout=out))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_build_and_selftests (test_acc03.TestShortener.test_build_and_selftests) ... ok
+test_random_walk_agrees_with_acc01 (test_acc03.TestShortener.test_random_walk_agrees_with_acc01) ... /work/acc03.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpe_b419kc/in0.txt' mode='r' encoding='UTF-8'>
+  procs.append(subprocess.Popen([SHORT] + opts, stdin=open(src), stdout=out))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_two_move_loop_is_cut (test_acc03.TestShortener.test_two_move_loop_is_cut) ... /work/acc03.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpqj485_ns/in0.txt' mode='r' encoding='UTF-8'>
+  procs.append(subprocess.Popen([SHORT] + opts, stdin=open(src), stdout=out))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_undo_is_cut_to_nothing (test_acc03.TestShortener.test_undo_is_cut_to_nothing) ... /work/acc03.py:87: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpe5i3m3zo/in0.txt' mode='r' encoding='UTF-8'>
+  procs.append(subprocess.Popen([SHORT] + opts, stdin=open(src), stdout=out))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 18.302s
+
+OK

@@ -20,31 +20,38 @@ agents working in MV2's name.
   any conjugate of the other (or its inverse), and is turned back into explicit moves of the
   verifier's move set. Every step is replayed in C, every path again in Python, and then checked
   by the challenge's verifier.
-- `acc03.c`, `acc03.py`: job acc03 (queued). acc02's search again, a third pass with more time on
-  what it leaves, and a path shortener in C: from each state of a path, every state within 3 moves
-  is looked up in a table of the states within 3 moves of later states of the same path, and a
-  hit replaces the moves in between when that is shorter. Each replacement is replayed before it
-  is used, and the whole path is replayed again in Python and checked by the verifier.
+- `acc03.c`, `acc03.py`: job acc03. acc02's search again, a third pass with more time on what it
+  leaves, and a path shortener in C: from each state of a path, every state within 3 moves is
+  looked up in a table of the states within 3 moves of later states of the same path, and a hit
+  replaces the moves in between when that is shorter. Each replacement is replayed before it is
+  used, and the whole path is replayed again in Python and checked by the verifier.
 - `test_acc0N.py`, `acc0N-predictions.md`: unit tests, and what we expected, written before each
   job ran.
-- `results/acc01/`, `results/acc02/`: graded checks and counts (no paths).
+- `results/acc01/`, `results/acc02/`, `results/acc03/`: graded checks and counts (no paths).
 
 ## Results so far
 
-    job    presentations   paths found      checked by the verifier (AC and Stable AC)
-    acc01  424 training    418              all
-    acc01  10,115 scored   180 (1.8%)       all; 2 proven shortest (length 8), median 35 moves
-    acc02  424 training    424              all
-    acc02  10,115 scored   4,934 (48.8%)    all; median length 273 to 299 by shard, longest 4,765
+    job    presentations       paths found      checked by the verifier (AC and Stable AC)
+    acc01  424 training        418              all
+    acc01  10,115 scored       180 (1.8%)       all; 2 proven shortest (length 8), median 35 moves
+    acc02  424 training        424              all
+    acc02  10,115 scored       4,934 (48.8%)    all; median length 273 to 299 by shard, longest 4,765
+    acc03  424 training        424              all; total length 11,019 -> 8,047 after shortening
+    acc03  5,058 (shards a+b)  2,862 (56.6%)    all; median length 303 -> 212 and 306 -> 218,
+                                                total length cut by 31-32%
+    acc03  shards c, d         not finished yet
 
 acc02 ran on 2026-10-27 in four shards of about 65 minutes each (two processes each). Searching
 classes of states instead of explicit moves took it from 180 to 4,934 presentations, but its
 paths are long, because rotating a relator by conjugation costs one move per letter. Only the
-shortest verified path on a presentation scores, so acc03 shortens them.
+shortest verified path on a presentation scores, so acc03 shortens them. On its first two shards
+acc03 solved 486 more presentations than acc02 did on the same shards (its third pass found 313
+of them), and its shortener made 99.7% of the paths strictly shorter.
 
 One finding we did not expect: larger presentations fell more often. With a starting total length
 of at most 20, acc02 solved 487 of 1,342 (36.3%); at 21 to 29, 2,270 of 4,772 (47.6%); at 30 or
 more, 2,177 of 4,001 (54.4%). We had predicted the opposite (acc02-predictions.md, prediction 6).
+acc03's first two shards show the same pattern (39% at most 20, 62-65% at 30 or more).
 
 The paths themselves are not published here while the challenge runs: it keeps paths private
 until it closes and then releases all valid solutions as a public benchmark. Counts and checks
