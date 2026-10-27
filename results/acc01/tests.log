@@ -1,0 +1,16 @@
+test_parse_all (test_acc01.TestRepo.test_parse_all) ... ok
+test_sample_paths_replay (test_acc01.TestRepo.test_sample_paths_replay) ... ok
+test_ball (test_acc01.TestSearch.test_ball) ... ok
+test_bfs_exact (test_acc01.TestSearch.test_bfs_exact) ... ok
+test_gs_and_shorten (test_acc01.TestSearch.test_gs_and_shorten) ... ok
+test_submission_lines_and_chunks (test_acc01.TestSearch.test_submission_lines_and_chunks) ... ok
+test_inverse_moves (test_acc01.TestWords.test_inverse_moves) ... ok
+test_moves_by_hand (test_acc01.TestWords.test_moves_by_hand) ... ok
+test_parse (test_acc01.TestWords.test_parse) ... ok
+test_reduce_and_join (test_acc01.TestWords.test_reduce_and_join) ... ok
+test_replay_limits (test_acc01.TestWords.test_replay_limits) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.120s
+
+OK

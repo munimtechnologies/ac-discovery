@@ -1,0 +1,18 @@
+===== run-01-python: python acc01.py --part fetch --out-dir /out
+SUMMARY fetch commit a0fd6e6f52d82c93ccc06ab91d81e8fa3678256e {"ac": 10115, "stable_ac": 10115, "train": 424}
+
+===== run-02-python: python -m unittest -v test_acc01
+
+===== run-03-python: python acc01.py --part control --out-dir /out
+ball radius 5: 40779 states, 0.1 s
+SUMMARY control all_match True failed [] {"GS": 375, "NONE": 6, "OPTIMAL": 43}
+
+===== run-04-python: python acc01.py --part search --workers 2 --out-dir /out
+ball radius 5: 40779 states, 0.2 s
+SUMMARY search 10115 {"GS": 178, "NONE": 9935, "OPTIMAL": 2} seconds 5461
+
+===== run-05-python: python acc01.py --part verify --out-dir /out
+SUMMARY verify lines 360 ok 360 files 1 rcs [0]
+
+===== run-06-python: python acc01.py --part grade --out-dir /out
+SUMMARY grade all_match True graded 17 failed [] {"by_status": {"GS": 178, "NONE": 9935, "OPTIMAL": 2}, "gs_lengths": {"max": 170, "median": 35, "n": 178}, "optimal_lengths": {"8": 2}, "seconds": 10919.0, "solved": 180}

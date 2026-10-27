@@ -1,0 +1,36 @@
+{
+ "by_status": {
+  "NONE": 9935,
+  "GS": 178,
+  "OPTIMAL": 2
+ },
+ "solved": 180,
+ "optimal_lengths": {
+  "8": 2
+ },
+ "gs_lengths": {
+  "n": 178,
+  "median": 35,
+  "max": 170
+ },
+ "seconds": 10919.0,
+ "graded": {
+  "control_ran": true,
+  "control_train_424": true,
+  "control_sample_replays": true,
+  "control_verifier_sample_ok": true,
+  "control_hashes_train": true,
+  "control_hashes_official": true,
+  "control_train_replay_ok": true,
+  "control_train_verified": true,
+  "control_train_lengths_agree": true,
+  "search_ran": true,
+  "verify_ran": true,
+  "all_10115": true,
+  "no_parse_error": true,
+  "replay_ok": true,
+  "ac_verified": true,
+  "sac_verified": true,
+  "lengths_agree": true
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "hashes_train_tail": "OK  848 challenges (424 ac-r2-v1, 424 sac-r8-v1); every move_spec_hash, instance_hash and manifest_hash verified\n",
+ "hashes_official_tail": "OK  20230 challenges (10115 ac-r2-v1, 10115 sac-r8-v1); every move_spec_hash, instance_hash and manifest_hash verified\n",
+ "by_status": {
+  "OPTIMAL": 43,
+  "GS": 375,
+  "NONE": 6
+ },
+ "files": [
+  {
+   "file": "acc01_train_001.txt",
+   "lines": 500,
+   "rc": 0,
+   "accepted": true,
+   "tail": null
+  },
+  {
+   "file": "acc01_train_002.txt",
+   "lines": 336,
+   "rc": 0,
+   "accepted": true,
+   "tail": null
+  }
+ ],
+ "replays": {
+  "ms-train-0160": true
+ },
+ "graded": {
+  "train_424": true,
+  "sample_replays": true,
+  "verifier_sample_ok": true,
+  "hashes_train": true,
+  "hashes_official": true,
+  "train_replay_ok": true,
+  "train_verified": true,
+  "train_lengths_agree": true
+ }
+}
