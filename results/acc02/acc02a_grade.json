@@ -1,0 +1,62 @@
+{
+ "control_solved": 424,
+ "by_status": {
+  "NONE": 1345,
+  "SOLVED": 1184
+ },
+ "solved": 1184,
+ "of": 2529,
+ "by_pass": {
+  "B": 312,
+  "A": 872
+ },
+ "lengths": {
+  "n": 1184,
+  "median": 280,
+  "max": 3502
+ },
+ "solved_by_start_total": {
+  "12": 1,
+  "15": 8,
+  "16": 18,
+  "17": 16,
+  "18": 14,
+  "19": 39,
+  "20": 27,
+  "21": 39,
+  "22": 34,
+  "23": 45,
+  "24": 46,
+  "25": 61,
+  "26": 39,
+  "27": 94,
+  "28": 57,
+  "29": 124,
+  "30": 85,
+  "31": 136,
+  "32": 51,
+  "33": 133,
+  "34": 43,
+  "35": 57,
+  "36": 17
+ },
+ "seconds": 7740.9,
+ "graded": {
+  "control_ran": true,
+  "control_build_selftest": true,
+  "control_train_424": true,
+  "control_train_replay_ok": true,
+  "control_train_verified": true,
+  "control_train_lengths_agree": true,
+  "control_train_no_error": true,
+  "search_ran": true,
+  "verify_ran": true,
+  "shard_size": true,
+  "no_parse_error": true,
+  "no_error": true,
+  "replay_ok": true,
+  "ac_verified": true,
+  "sac_verified": true,
+  "lengths_agree": true
+ }
+}

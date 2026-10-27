@@ -1,0 +1,23 @@
+===== setup-01-python: python fetch_acc.py acc01.py
+acc01.py: downloaded
+
+===== run-01-python: python acc01.py --part fetch --out-dir /out
+SUMMARY fetch commit a0fd6e6f52d82c93ccc06ab91d81e8fa3678256e {"ac": 10115, "stable_ac": 10115, "train": 424}
+
+===== run-02-python: python -m unittest -v test_acc02
+
+===== run-03-python: python acc02.py --part control --shard d --out-dir /out
+pass A: 424 presentations, 2 s
+pass B: 0 presentations, 0 s
+SUMMARY control all_match True failed [] {"SOLVED": 424}
+
+===== run-04-python: python acc02.py --part search --shard d --workers 2 --out-dir /out
+pass A: 2528 presentations, 909 s
+pass B: 1672 presentations, 2884 s
+SUMMARY search d 2528 {"NONE": 1286, "SOLVED": 1242} seconds 3798
+
+===== run-05-python: python acc02.py --part verify --shard d --out-dir /out
+SUMMARY verify d lines 2484 ok 2484 files 5 rcs [0]
+
+===== run-06-python: python acc02.py --part grade --shard d --out-dir /out
+SUMMARY grade d all_match True graded 16 failed [] {"by_pass": {"A": 856, "B": 386}, "by_status": {"NONE": 1286, "SOLVED": 1242}, "control_solved": 424, "lengths": {"max": 3900, "median": 299, "n": 1242}, "of": 2528, "seconds": 7518.6, "solved": 1242, "solved_by_start_total": {"12": 1, "13": 2, "14": 2, "15": 11, "16": 15, "17": 9, "18": 20, "19": 42, "20": 22, "21": 23, "22": 23, "23": 54, "24": 43, "25": 80, "26": 64, "27": 108, "28": 54, "29": 137, "30": 58, "31": 160, "32": 66, "33": 110, "34": 45, "35": 68, "36": 24, "40": 1}}

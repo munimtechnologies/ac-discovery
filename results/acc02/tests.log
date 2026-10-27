@@ -1,0 +1,27 @@
+test_cut_loops (test_acc02.TestHelpers.test_cut_loops) ... ok
+test_finish (test_acc02.TestHelpers.test_finish) ... ok
+test_parse_line (test_acc02.TestHelpers.test_parse_line) ... ok
+test_to_str (test_acc02.TestHelpers.test_to_str) ... ok
+test_build_and_selftest (test_acc02.TestSearch.test_build_and_selftest) ... ok
+test_small_presentations (test_acc02.TestSearch.test_small_presentations) ... /work/acc02.py:88: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmps3mvg3lb/in0.txt' mode='r' encoding='UTF-8'>
+  procs.append(subprocess.Popen([BINARY, "--nodes", str(nodes)] + opts,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/work/acc02.py:88: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmps3mvg3lb/in1.txt' mode='r' encoding='UTF-8'>
+  procs.append(subprocess.Popen([BINARY, "--nodes", str(nodes)] + opts,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/work/acc02.py:88: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpxko2954y/in0.txt' mode='r' encoding='UTF-8'>
+  procs.append(subprocess.Popen([BINARY, "--nodes", str(nodes)] + opts,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/work/acc02.py:88: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpxko2954y/in1.txt' mode='r' encoding='UTF-8'>
+  procs.append(subprocess.Popen([BINARY, "--nodes", str(nodes)] + opts,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_too_long_is_skipped (test_acc02.TestSearch.test_too_long_is_skipped) ... /work/acc02.py:88: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpf4b0vvig/in0.txt' mode='r' encoding='UTF-8'>
+  procs.append(subprocess.Popen([BINARY, "--nodes", str(nodes)] + opts,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.746s
+
+OK

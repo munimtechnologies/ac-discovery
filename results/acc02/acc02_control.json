@@ -1,0 +1,31 @@
+{
+ "build_tail": "SELFTEST ok 0\n",
+ "by_status": {
+  "SOLVED": 424
+ },
+ "solved": 424,
+ "files": [
+  {
+   "file": "acc02_train_001.txt",
+   "lines": 500,
+   "rc": 0,
+   "accepted": true,
+   "tail": null
+  },
+  {
+   "file": "acc02_train_002.txt",
+   "lines": 348,
+   "rc": 0,
+   "accepted": true,
+   "tail": null
+  }
+ ],
+ "graded": {
+  "build_selftest": true,
+  "train_424": true,
+  "train_replay_ok": true,
+  "train_verified": true,
+  "train_lengths_agree": true,
+  "train_no_error": true
+ }
+}
