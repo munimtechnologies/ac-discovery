@@ -1,0 +1,137 @@
+{
+ "items": 240,
+ "ref_solved": 142,
+ "ref_sum": 42781,
+ "solved_any_width": 86,
+ "new_vs_ref": 0,
+ "both_solved": 86,
+ "both_sum_best": 9691,
+ "both_sum_ref": 14708,
+ "better": 78,
+ "shorter_than_ref": 78,
+ "combined_sum": 37368,
+ "best_config": {
+  "w64k": 57,
+  "w8k": 26,
+  "w1k": 3
+ },
+ "configs": {
+  "w1k": {
+   "status": {
+    "NONE": 189,
+    "SOLVED": 51
+   },
+   "solved": 51,
+   "new_vs_ref": 0,
+   "lengths": {
+    "n": 51,
+    "median": 241,
+    "mean": 239.6,
+    "max": 496,
+    "sum": 12219
+   },
+   "s33_lengths": {
+    "n": 51,
+    "median": 135,
+    "mean": 160.9,
+    "max": 445,
+    "sum": 8207
+   },
+   "both_solved": 51,
+   "both_sum_s33": 8207,
+   "both_sum_ref": 7699,
+   "shorter_than_ref": 22,
+   "seconds_mean": 1.38,
+   "seconds_max": 2.586
+  },
+  "w8k": {
+   "status": {
+    "NONE": 160,
+    "SOLVED": 80
+   },
+   "solved": 80,
+   "new_vs_ref": 0,
+   "lengths": {
+    "n": 80,
+    "median": 140,
+    "mean": 198.3,
+    "max": 532,
+    "sum": 15864
+   },
+   "s33_lengths": {
+    "n": 80,
+    "median": 115,
+    "mean": 143.7,
+    "max": 420,
+    "sum": 11492
+   },
+   "both_solved": 80,
+   "both_sum_s33": 11492,
+   "both_sum_ref": 13948,
+   "shorter_than_ref": 63,
+   "seconds_mean": 29.6,
+   "seconds_max": 638.773
+  },
+  "w64k": {
+   "status": {
+    "NONE": 170,
+    "SOLVED": 70
+   },
+   "solved": 70,
+   "new_vs_ref": 0,
+   "lengths": {
+    "n": 70,
+    "median": 67,
+    "mean": 79.7,
+    "max": 163,
+    "sum": 5580
+   },
+   "s33_lengths": {
+    "n": 70,
+    "median": 67,
+    "mean": 77.6,
+    "max": 163,
+    "sum": 5433
+   },
+   "both_solved": 70,
+   "both_sum_s33": 5433,
+   "both_sum_ref": 9044,
+   "shorter_than_ref": 62,
+   "seconds_mean": 37.97,
+   "seconds_max": 45.468
+  }
+ },
+ "seconds": {
+  "w1k": 170,
+  "w8k": 3596,
+  "w64k": 4589,
+  "s33": 26
+ },
+ "files": [
+  {
+   "file": "acc06_all_001.txt",
+   "lines": 172,
+   "rc": 0
+  },
+  {
+   "file": "acc06_better_sub_001.txt",
+   "lines": 156,
+   "rc": 0
+  }
+ ],
+ "graded": {
+  "pilot_ran": true,
+  "build_selftest": true,
+  "items": true,
+  "no_parse_error": true,
+  "no_beam_error": true,
+  "no_s33_error": true,
+  "some_solved": true,
+  "replay_ok": true,
+  "ac_verified": true,
+  "sac_verified": true,
+  "lengths_agree": true,
+  "better_verified": true,
+  "s33_never_longer": true
+ }
+}

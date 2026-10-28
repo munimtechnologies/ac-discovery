@@ -1,0 +1,22 @@
+===== setup-01-python: python fetch_acc.py acc01.py acc02.py acc02.c acc03.py acc03.c acc04.py acc05.py
+acc01.py: downloaded
+acc02.py: downloaded
+acc02.c: downloaded
+acc03.py: downloaded
+acc03.c: downloaded
+acc04.py: downloaded
+acc05.py: downloaded
+
+===== run-01-python: python acc01.py --part fetch --out-dir /out
+SUMMARY fetch commit a0fd6e6f52d82c93ccc06ab91d81e8fa3678256e {"ac": 10115, "stable_ac": 10115, "train": 424}
+
+===== run-02-python: python -m unittest -v test_acc06
+
+===== run-03-python: python acc06.py --part pilot --n 240 --workers 2 --minutes 240 --out-dir /out
+beam w1k: 240 of 240 reached, 51 solved, 170 s
+beam w8k: 240 of 240 reached, 80 solved, 3596 s
+beam w64k: 240 of 240 reached, 70 solved, 4589 s
+SUMMARY pilot items 240 solved 86 better 78 seconds {"s33": 26, "w1k": 170, "w64k": 4589, "w8k": 3596}
+
+===== run-04-python: python acc06.py --part grade --n 240 --out-dir /out
+SUMMARY grade all_match True graded 13 failed [] {"best_config": {"w1k": 3, "w64k": 57, "w8k": 26}, "better": 78, "both_solved": 86, "both_sum_best": 9691, "both_sum_ref": 14708, "combined_sum": 37368, "configs": {"w1k": {"both_solved": 51, "both_sum_ref": 7699, "both_sum_s33": 8207, "lengths": {"max": 496, "mean": 239.6, "median": 241, "n": 51, "sum": 12219}, "new_vs_ref": 0, "s33_lengths": {"max": 445, "mean": 160.9, "median": 135, "n": 51, "sum": 8207}, "seconds_max": 2.586, "seconds_mean": 1.38, "shorter_than_ref": 22, "solved": 51, "status": {"NONE": 189, "SOLVED": 51}}, "w64k": {"both_solved": 70, "both_sum_ref": 9044, "both_sum_s33": 5433, "lengths": {"max": 163, "mean": 79.7, "median": 67, "n": 70, "sum": 5580}, "new_vs_ref": 0, "s33_lengths": {"max": 163, "mean": 77.6, "median": 67, "n": 70, "sum": 5433}, "seconds_max": 45.468, "seconds_mean": 37.97, "shorter_than_ref": 62, "solved": 70, "status": {"NONE": 170, "SOLVED": 70}}, "w8k": {"both_solved": 80, "both_sum_ref": 13948, "both_sum_s33": 11492, "lengths": {"max": 532, "mean": 198.3, "median": 140, "n": 80, "sum": 15864}, "new_vs_ref": 0, "s33_lengths": {"max": 420, "mean": 143.7, "median": 115, "n": 80, "sum": 11492}, "seconds_max": 638.773, "seconds_mean": 29.6, "shorter_than_ref": 63, "solved": 80, "status": {"NONE": 160, "SOLVED": 80}}}, "files": [{"file": "acc06_all_001.txt", "lines": 172, "rc": 0}, {"file": "acc06_better_sub_001.txt", "lines": 156, "rc": 0}], "items": 240, "new_vs_ref": 0, "ref_solved": 142, "ref_sum": 42781, "seconds": {"s33": 26, "w1k": 170, "w64k": 4589, "w8k": 3596}, "shorter_than_ref": 78, "solved_any_width": 86}
