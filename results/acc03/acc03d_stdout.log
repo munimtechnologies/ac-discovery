@@ -1,0 +1,26 @@
+===== setup-01-python: python fetch_acc.py acc01.py acc02.py acc02.c
+acc01.py: downloaded
+acc02.py: downloaded
+acc02.c: downloaded
+
+===== run-01-python: python acc01.py --part fetch --out-dir /out
+SUMMARY fetch commit a0fd6e6f52d82c93ccc06ab91d81e8fa3678256e {"ac": 10115, "stable_ac": 10115, "train": 424}
+
+===== run-02-python: python -m unittest -v test_acc03
+
+===== run-03-python: python acc03.py --part control --shard d --out-dir /out
+pass A: 424 presentations, 2 s
+pass B: 0 presentations, 0 s
+SUMMARY control all_match True failed [] {"by_status": {"SOLVED": 424}, "lengths": {"max": 128, "mean": 19.0, "median": 14, "n": 424, "sum": 8047}, "orig_lengths": {"max": 217, "mean": 26.0, "median": 20, "n": 424, "sum": 11019}}
+
+===== run-04-python: python acc03.py --part search --shard d --workers 2 --out-dir /out
+pass A: 2528 presentations, 889 s
+pass B: 1667 presentations, 2837 s
+pass C: 1273 presentations, 5786 s
+SUMMARY search d 2528 {"NONE": 1129, "SOLVED": 1399} search_seconds 9517 shorten_seconds 699
+
+===== run-05-python: python acc03.py --part verify --shard d --out-dir /out
+SUMMARY verify d lines 2798 ok 2798 files 6 rcs [0]
+
+===== run-06-python: python acc03.py --part grade --shard d --out-dir /out
+SUMMARY grade d all_match True graded 18 failed [] {"by_pass": {"A": 861, "B": 394, "C": 144}, "by_status": {"NONE": 1129, "SOLVED": 1399}, "control_lengths": [{"max": 217, "mean": 26.0, "median": 20, "n": 424, "sum": 11019}, {"max": 128, "mean": 19.0, "median": 14, "n": 424, "sum": 8047}], "control_solved": 424, "lengths": {"max": 4004, "mean": 330.6, "median": 234, "n": 1399, "sum": 462453}, "of": 2528, "orig_lengths": {"max": 5199, "mean": 482.3, "median": 331, "n": 1399, "sum": 674753}, "seconds": 18945.5, "short_status": {"OK": 1399}, "shortened": 1394, "solved": 1399, "solved_by_bucket": {"21_29": [659, 1209], "ge30": [610, 973], "le20": [130, 346]}}

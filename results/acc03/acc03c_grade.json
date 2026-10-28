@@ -1,0 +1,83 @@
+{
+ "control_solved": 424,
+ "control_lengths": [
+  {
+   "n": 424,
+   "median": 20,
+   "mean": 26.0,
+   "max": 217,
+   "sum": 11019
+  },
+  {
+   "n": 424,
+   "median": 14,
+   "mean": 19.0,
+   "max": 128,
+   "sum": 8047
+  }
+ ],
+ "by_status": {
+  "SOLVED": 1455,
+  "NONE": 1074
+ },
+ "solved": 1455,
+ "of": 2529,
+ "by_pass": {
+  "A": 872,
+  "C": 142,
+  "B": 441
+ },
+ "orig_lengths": {
+  "n": 1455,
+  "median": 311,
+  "mean": 462.4,
+  "max": 5103,
+  "sum": 672818
+ },
+ "lengths": {
+  "n": 1455,
+  "median": 222,
+  "mean": 318.2,
+  "max": 3945,
+  "sum": 463037
+ },
+ "short_status": {
+  "OK": 1455
+ },
+ "shortened": 1451,
+ "solved_by_bucket": {
+  "le20": [
+   129,
+   332
+  ],
+  "21_29": [
+   649,
+   1170
+  ],
+  "ge30": [
+   677,
+   1027
+  ]
+ },
+ "seconds": 18246.1,
+ "graded": {
+  "control_ran": true,
+  "control_build_selftest": true,
+  "control_train_424": true,
+  "control_train_replay_ok": true,
+  "control_train_verified": true,
+  "control_train_lengths_agree": true,
+  "control_train_no_error": true,
+  "control_train_never_longer": true,
+  "search_ran": true,
+  "verify_ran": true,
+  "shard_size": true,
+  "no_parse_error": true,
+  "no_error": true,
+  "replay_ok": true,
+  "ac_verified": true,
+  "sac_verified": true,
+  "lengths_agree": true,
+  "never_longer": true
+ }
+}
