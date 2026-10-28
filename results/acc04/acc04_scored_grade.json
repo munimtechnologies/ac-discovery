@@ -1,0 +1,64 @@
+{
+ "solved": 132,
+ "of": 240,
+ "orig_lengths": {
+  "n": 132,
+  "median": 302,
+  "mean": 461.3,
+  "max": 3796,
+  "sum": 60893
+ },
+ "stages": {
+  "s33": {
+   "n": 132,
+   "median": 218,
+   "mean": 324.9,
+   "max": 2972,
+   "sum": 42888
+  },
+  "s43": {
+   "n": 132,
+   "median": 198,
+   "mean": 298.2,
+   "max": 2456,
+   "sum": 39361,
+   "status": {
+    "OK": 132
+   },
+   "shorter_than_prev": 114,
+   "seconds_mean": 4.52,
+   "seconds_max": 39.156
+  },
+  "s44": {
+   "n": 132,
+   "median": 192,
+   "mean": 285.8,
+   "max": 2320,
+   "sum": 37726,
+   "status": {
+    "OK": 132
+   },
+   "shorter_than_prev": 97,
+   "seconds_mean": 6.76,
+   "seconds_max": 53.809
+  }
+ },
+ "stage_seconds": {
+  "s33": 947,
+  "s43": 312,
+  "s44": 480
+ },
+ "graded": {
+  "pilot_ran": true,
+  "build_selftest": true,
+  "items": true,
+  "no_parse_error": true,
+  "no_error": true,
+  "replay_ok": true,
+  "ac_verified": true,
+  "sac_verified": true,
+  "lengths_agree": true,
+  "never_longer": true,
+  "no_stage_error": true
+ }
+}

@@ -27,9 +27,11 @@ agents working in MV2's name.
   used, and the whole path is replayed again in Python and checked by the verifier.
 - `acc04.py`: job acc04, a pilot. It measures what radius 4 adds to acc03's shortener, and what it
   costs, on the training presentations and on 240 scored ones, before any bulk run.
+- `acc05.py`: job acc05, the bulk run that acc04's decision rule chose: acc03's search on all
+  10,115 presentations in eight shards, with both radius-4 stages on every path.
 - `test_acc0N.py`, `acc0N-predictions.md`: unit tests, and what we expected, written before each
   job ran.
-- `results/acc01/`, `results/acc02/`, `results/acc03/`: graded checks and counts (no paths).
+- `results/acc01/` to `results/acc04/`: graded checks and counts (no paths).
 
 ## Results so far
 
@@ -41,7 +43,10 @@ agents working in MV2's name.
     acc03  424 training        424              all; total length 11,019 -> 8,047 after shortening
     acc03  10,115 scored       5,716 (56.5%)    all; median length 212 to 234 by shard after
                                                 shortening, total length cut by 31.4%
-    acc04  pilot               queued
+    acc04  424 training        424              all; total 8,047 -> 7,612 with radius 4 (-5.4%)
+    acc04  240 scored (pilot)  132              all; total 42,888 -> 37,726 with radius 4 (-12.0%),
+                                                median 218 -> 192
+    acc05  10,115 scored       queued (eight shards)
 
 acc02 ran on 2026-10-27 in four shards of about 65 minutes each (two processes each). Searching
 classes of states instead of explicit moves took it from 180 to 4,934 presentations, but its
@@ -49,7 +54,8 @@ paths are long, because rotating a relator by conjugation costs one move per let
 shortest verified path on a presentation scores, so acc03 shortens them. acc03 (four shards of
 about three hours, 2026-10-27/28) solved 782 more presentations than acc02 (its third pass found
 599 paths that its first two passes had not), and its shortener made 99.7% of the paths strictly
-shorter.
+shorter. acc04 (2026-10-28) showed that radius-4 shortcuts take another 12% off acc03's paths on
+scored presentations at under 7 s per path, so acc05 applies them to everything.
 
 One finding we did not expect: larger presentations fell more often. With a starting total length
 of at most 20, acc03 solved 515 of 1,342 (38.4%); at 21 to 29, 2,636 of 4,772 (55.2%); at 30 or
