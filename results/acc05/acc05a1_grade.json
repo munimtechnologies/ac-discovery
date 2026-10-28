@@ -1,0 +1,96 @@
+{
+ "solved": 737,
+ "of": 1264,
+ "by_pass": {
+  "B": 222,
+  "C": 67,
+  "A": 448
+ },
+ "solved_by_bucket": {
+  "21_29": [
+   344,
+   589
+  ],
+  "ge30": [
+   328,
+   503
+  ],
+  "le20": [
+   65,
+   172
+  ]
+ },
+ "orig_lengths": {
+  "n": 737,
+  "median": 317,
+  "mean": 487.8,
+  "max": 4567,
+  "sum": 359530
+ },
+ "stages": {
+  "s33": {
+   "n": 737,
+   "median": 222,
+   "mean": 335.7,
+   "max": 3350,
+   "sum": 247438
+  },
+  "s43": {
+   "n": 737,
+   "median": 206,
+   "mean": 307.2,
+   "max": 2866,
+   "sum": 226403,
+   "status": {
+    "OK": 737
+   },
+   "shorter_than_prev": 665,
+   "seconds_mean": 5.09,
+   "seconds_max": 54.516
+  },
+  "s44": {
+   "n": 737,
+   "median": 193,
+   "mean": 293.4,
+   "max": 2663,
+   "sum": 216231,
+   "status": {
+    "OK": 737
+   },
+   "shorter_than_prev": 577,
+   "seconds_mean": 7.99,
+   "seconds_max": 74.678
+  }
+ },
+ "stage_seconds": {
+  "search": 4432,
+  "s33": 457,
+  "s43": 1879,
+  "s44": 2957
+ },
+ "reached": {
+  "s43": [
+   737,
+   737
+  ],
+  "s44": [
+   737,
+   737
+  ]
+ },
+ "files": 3,
+ "graded": {
+  "run_ran": true,
+  "build_selftest": true,
+  "shard_size": true,
+  "no_parse_error": true,
+  "no_error": true,
+  "some_solved": true,
+  "replay_ok": true,
+  "ac_verified": true,
+  "sac_verified": true,
+  "lengths_agree": true,
+  "never_longer": true,
+  "no_stage_error": true
+ }
+}

@@ -1,5 +1,5 @@
 # Copyright 2026 MV2 of Munim, Inc. Licensed under the Apache License, Version 2.0 (Apache-2.0).
-"""Setup step of jobs acc02 to acc05: download published files of munimtechnologies/ac-discovery
+"""Setup step of jobs acc02 to acc06: download published files of munimtechnologies/ac-discovery
 (saved under their base name), waiting (up to 40 minutes) for a file that is not committed yet.
 
 Usage: python fetch_acc.py PATH [PATH ...]     e.g. acc01.py

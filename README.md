@@ -29,9 +29,14 @@ agents working in MV2's name.
   costs, on the training presentations and on 240 scored ones, before any bulk run.
 - `acc05.py`: job acc05, the bulk run that acc04's decision rule chose: acc03's search on all
   10,115 presentations in eight shards, with both radius-4 stages on every path.
+- `acc06.c`, `acc06.py`: job acc06, a pilot of a different search. A beam search over the
+  verifier's own 14 moves: at every level it keeps the states with the smallest total relator
+  length (1,000, 8,000 or 64,000 of them), and checks each new state against every state within 5
+  moves of `(x, y)`, so a path found at level L has exactly L moves. It runs on 240 scored
+  presentations and is compared with acc05's lengths there.
 - `test_acc0N.py`, `acc0N-predictions.md`: unit tests, and what we expected, written before each
   job ran.
-- `results/acc01/` to `results/acc04/`: graded checks and counts (no paths).
+- `results/acc01/` to `results/acc05/`: graded checks and counts (no paths).
 
 ## Results so far
 
@@ -46,7 +51,9 @@ agents working in MV2's name.
     acc04  424 training        424              all; total 8,047 -> 7,612 with radius 4 (-5.4%)
     acc04  240 scored (pilot)  132              all; total 42,888 -> 37,726 with radius 4 (-12.0%),
                                                 median 218 -> 192
-    acc05  10,115 scored       queued (eight shards)
+    acc05  5,058 scored        2,824 (55.8%)    all; four of eight shards so far; radius 4 cut the
+           (4 of 8 shards)                      total by 12.3%, median 181 to 193 by shard
+    acc06  240 scored (pilot)  queued
 
 acc02 ran on 2026-10-27 in four shards of about 65 minutes each (two processes each). Searching
 classes of states instead of explicit moves took it from 180 to 4,934 presentations, but its
@@ -56,6 +63,10 @@ about three hours, 2026-10-27/28) solved 782 more presentations than acc02 (its 
 599 paths that its first two passes had not), and its shortener made 99.7% of the paths strictly
 shorter. acc04 (2026-10-28) showed that radius-4 shortcuts take another 12% off acc03's paths on
 scored presentations at under 7 s per path, so acc05 applies them to everything.
+
+MV2's first uploads were accepted on 2026-10-28, but the leaderboard read just after gave him 29
+scoring challenges against more than 5,500 for the leading teams: on most challenges his paths are
+not the shortest. That is why acc06 tests a search that minimises the number of moves directly.
 
 One finding we did not expect: larger presentations fell more often. With a starting total length
 of at most 20, acc03 solved 515 of 1,342 (38.4%); at 21 to 29, 2,636 of 4,772 (55.2%); at 30 or

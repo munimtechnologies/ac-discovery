@@ -1,0 +1,23 @@
+===== setup-01-python: python fetch_acc.py acc01.py acc02.py acc02.c acc03.py acc03.c acc04.py
+acc01.py: downloaded
+acc02.py: downloaded
+acc02.c: downloaded
+acc03.py: downloaded
+acc03.c: downloaded
+acc04.py: downloaded
+
+===== run-01-python: python acc01.py --part fetch --out-dir /out
+SUMMARY fetch commit a0fd6e6f52d82c93ccc06ab91d81e8fa3678256e {"ac": 10115, "stable_ac": 10115, "train": 424}
+
+===== run-02-python: python -m unittest -v test_acc05
+
+===== run-03-python: python acc05.py --part run --shard a --half 1 --workers 2 --minutes 240 --out-dir /out
+pass A: 1264 presentations, 422 s
+pass B: 816 presentations, 1334 s
+pass C: 594 presentations, 2664 s
+stage s43: 737 of 737 paths reached, 1879 s
+stage s44: 737 of 737 paths reached, 2957 s
+SUMMARY run acc05a1 items 1264 solved 737 seconds {"s33": 457, "s43": 1879, "s44": 2957, "search": 4432}
+
+===== run-04-python: python acc05.py --part grade --shard a --half 1 --out-dir /out
+SUMMARY grade acc05a1 all_match True graded 12 failed [] {"by_pass": {"A": 448, "B": 222, "C": 67}, "files": 3, "of": 1264, "orig_lengths": {"max": 4567, "mean": 487.8, "median": 317, "n": 737, "sum": 359530}, "reached": {"s43": [737, 737], "s44": [737, 737]}, "solved": 737, "solved_by_bucket": {"21_29": [344, 589], "ge30": [328, 503], "le20": [65, 172]}, "stage_seconds": {"s33": 457, "s43": 1879, "s44": 2957, "search": 4432}, "stages": {"s33": {"max": 3350, "mean": 335.7, "median": 222, "n": 737, "sum": 247438}, "s43": {"max": 2866, "mean": 307.2, "median": 206, "n": 737, "seconds_max": 54.516, "seconds_mean": 5.09, "shorter_than_prev": 665, "status": {"OK": 737}, "sum": 226403}, "s44": {"max": 2663, "mean": 293.4, "median": 193, "n": 737, "seconds_max": 74.678, "seconds_mean": 7.99, "shorter_than_prev": 577, "status": {"OK": 737}, "sum": 216231}}}
